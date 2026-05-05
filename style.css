@@ -1,4 +1,8 @@
 /* Reset basics + body */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "SN Pro", sans-serif !important;
     background: none !important;
@@ -115,7 +119,7 @@ body {
 .banner-text {
     max-width: 600px;
     padding: 3rem 2rem;
-    background: rgba(160, 231, 229, 0.5);
+    background: rgba(160, 231, 229, 0.9);
     border-radius: 50px;
     text-align: center;
     opacity: 0;

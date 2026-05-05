@@ -1,3 +1,26 @@
+// ── YouTube IFrame API for Background Video ─────────────────────────────────────────────────
+
+let player;
+
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('backgroundVideo', {
+        events: {
+            'onReady': onPlayerReady
+        }
+    });
+}
+
+function onPlayerReady(event) {
+    // Set playback rate to 0.85x (15% slower)
+    event.target.setPlaybackRate(0.85);
+}
+
+// Load YouTube IFrame API
+const tag = document.createElement('script');
+tag.src = 'https://www.youtube.com/iframe_api';
+const firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
 document.addEventListener('DOMContentLoaded', () => {
     // ── Scroll Animation Observer ──────────────────────────────────────────
     const observerOptions = {
@@ -54,78 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize first slide
     showSlide(currentSlide);
-
-
-    loadCategory('./JSON/cake.JSON', 'clubs-container', 'loading-cakes');
-    loadCategory('./JSON/cookies.JSON', 'clubs-containerA', 'loading-cookies');
-    loadCategory('./JSON/other.JSON', 'clubs-containerB', 'loading-other');
-
-    // ── Card loading only if container exists ─────────────────
-
-    // Correct containers
-
-
-    function loadCategory(file, containerId, loadingId) {
-        const loading = document.getElementById(loadingId);
-
-        if (loading) loading.style.display = 'block';
-
-        fetch(file)
-            .then(res => res.ok ? res.json() : [])
-            .then(items => {
-                const container = document.getElementById(containerId);
-                if (!container) return;
-
-                container.innerHTML = '';
-
-                items.forEach(item => {
-                    const col = document.createElement('div');
-                    col.className = 'col';
-
-                    col.innerHTML = `
-                    <div class="club-card">
-                        <img src="${item.image}" class="club-image" alt="${item.name}">
-                        <h3>${item.name}</h3>
-                        <p>${item.description}</p>
-                    </div>
-                `;
-
-                    container.appendChild(col);
-                });
-
-                // ✅ HIDE loading when done
-                if (loading) loading.style.display = 'none';
-            })
-            .catch(() => {
-                const container = document.getElementById(containerId);
-                if (container) {
-                    container.innerHTML = '<p class="text-center">Failed to load items.</p>';
-                }
-
-                if (loading) loading.style.display = 'none';
-            });
-    }
-
-    function getCurrentPageFilename() {
-        const parts = window.location.pathname.split('/');
-        return parts[parts.length - 1] || '';
-    }
-
-    function getPageLabel(page) {
-        const map = {
-            'index.html': 'Home',
-            'insta.html': 'Creations',
-            'buy.html': 'Purchase & Reviews',
-        };
-        return map[page] || (page ? page.replace('.html', '') : '');
-    }
-
-    function escapeHtml(str) {
-        return String(str).replace(/[&<>"']/g, s => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": "&#39;" }[s]));
-    }
-
-
-
 
 });
 
