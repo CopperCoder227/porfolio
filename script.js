@@ -43,40 +43,82 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ── About Carousel ───────────────────────────────────────────────────
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.carousel-slide');
-    const dots = document.querySelectorAll('.dot');
-    const totalSlides = slides.length;
+    const aboutCarousel = document.getElementById('aboutCarousel');
+    if (aboutCarousel) {
+        let currentSlideAbout = 0;
+        const slidesAbout = aboutCarousel.querySelectorAll('.carousel-slide');
+        const dotsAbout = aboutCarousel.querySelectorAll('.dot');
+        const totalSlidesAbout = slidesAbout.length;
 
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            slide.classList.toggle('active', i === index);
+        function showSlideAbout(index) {
+            slidesAbout.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+            dotsAbout.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+        }
+
+        function nextSlideAbout() {
+            currentSlideAbout = (currentSlideAbout + 1) % totalSlidesAbout;
+            showSlideAbout(currentSlideAbout);
+        }
+
+        // Auto-advance every 10 seconds
+        let carouselIntervalAbout = setInterval(nextSlideAbout, 10000);
+
+        // Dot click handlers
+        dotsAbout.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentSlideAbout = index;
+                showSlideAbout(currentSlideAbout);
+                clearInterval(carouselIntervalAbout);
+                carouselIntervalAbout = setInterval(nextSlideAbout, 10000);
+            });
         });
-        dots.forEach((dot, i) => {
-            dot.classList.toggle('active', i === index);
-        });
+
+        // Initialize first slide
+        showSlideAbout(currentSlideAbout);
     }
 
-    function nextSlide() {
-        currentSlide = (currentSlide + 1) % totalSlides;
-        showSlide(currentSlide);
-    }
+    // ── Future Carousel ───────────────────────────────────────────────────
+    const futureCarousel = document.getElementById('futureCarousel');
+    if (futureCarousel) {
+        let currentSlideFuture = 0;
+        const slidesFuture = futureCarousel.querySelectorAll('.carousel-slide');
+        const dotsFuture = futureCarousel.querySelectorAll('.dot');
+        const totalSlidesFuture = slidesFuture.length;
 
-    // Auto-advance every 10 seconds
-    let carouselInterval = setInterval(nextSlide, 10000);
+        function showSlideFuture(index) {
+            slidesFuture.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+            dotsFuture.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+        }
 
-    // Dot click handlers
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-            currentSlide = index;
-            showSlide(currentSlide);
-            clearInterval(carouselInterval);
-            carouselInterval = setInterval(nextSlide, 10000);
+        function nextSlideFuture() {
+            currentSlideFuture = (currentSlideFuture + 1) % totalSlidesFuture;
+            showSlideFuture(currentSlideFuture);
+        }
+
+        // Auto-advance every 10 seconds
+        let carouselIntervalFuture = setInterval(nextSlideFuture, 10000);
+
+        // Dot click handlers
+        dotsFuture.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentSlideFuture = index;
+                showSlideFuture(currentSlideFuture);
+                clearInterval(carouselIntervalFuture);
+                carouselIntervalFuture = setInterval(nextSlideFuture, 10000);
+            });
         });
-    });
 
-    // Initialize first slide
-    showSlide(currentSlide);
+        // Initialize first slide
+        showSlideFuture(currentSlideFuture);
+    }
 
 });
 

@@ -240,6 +240,67 @@ body {
     color: #333;
 }
 
+/* ── Future Section ─────────────────────────────────────────────────── */
+.future-section {
+    background: rgba(160, 231, 229, 0.9);
+    padding: 4rem 2rem;
+    margin: 2rem auto;
+    max-width: 90%;
+    opacity: 0;
+    border-radius: 30px;
+}
+
+.future-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+    flex-direction: row-reverse;
+}
+
+.future-carousel-wrapper {
+    flex: 1;
+    min-width: 300px;
+}
+
+.future-carousel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    aspect-ratio: 1;
+    background: #f5f5f5;
+}
+
+.future-content {
+    flex: 1;
+    padding: 1rem 0;
+}
+
+.future-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #111;
+}
+
+.future-name {
+    font-size: 2rem;
+    font-weight: 700;
+    background: #00ffdd;
+    color: #000;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+}
+
+.future-bio {
+    font-size: 2rem !important;
+    line-height: 1.6;
+    color: #333;
+}
+
 @media (max-width: 768px) {
     .about-section {
         padding: 2rem 1rem;
@@ -265,6 +326,33 @@ body {
     }
 
     .about-bio {
+        font-size: 1.5rem !important;
+    }
+
+    .future-section {
+        padding: 2rem 1rem;
+        margin: 1rem auto;
+        max-width: 95%;
+    }
+
+    .future-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .future-carousel-wrapper {
+        width: 100%;
+    }
+
+    .future-title {
+        font-size: 1.3rem;
+    }
+
+    .future-name {
+        font-size: 1.5rem;
+    }
+
+    .future-bio {
         font-size: 1.5rem !important;
     }
 }
@@ -294,6 +382,33 @@ body {
     }
 
     .about-bio {
+        font-size: 1rem !important;
+    }
+
+    .future-section {
+        padding: 1.5rem 1rem;
+        margin: 0.5rem auto;
+        max-width: 100%;
+    }
+
+    .future-container {
+        gap: 1rem;
+    }
+
+    .future-title {
+        font-size: 1.1rem;
+    }
+
+    .future-name {
+        font-size: 1.3rem;
+        padding: 0.5rem 0.75rem;
+    }
+
+    .future-carousel-wrapper {
+        min-width: 250px;
+    }
+
+    .future-bio {
         font-size: 1rem !important;
     }
 }
