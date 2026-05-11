@@ -1,0 +1,108 @@
+[
+    {
+        "name": "Rock Paper Scissors",
+        "images": [
+            "RPS.png",
+            "RPS2.png",
+            "RPS3.png"
+        ],
+        "bio": "Interactive game implementation with player vs computer gameplay and score tracking.",
+        "link": "#"
+    },
+    {
+        "name": "To-Do List",
+        "images": [
+            "ToDo.png",
+            "ToDo2.png"
+        ],
+        "bio": "Functional task management application with add, delete, and mark-complete features.",
+        "link": "#"
+    },
+    {
+        "name": "Kirby Game",
+        "images": [
+            "Kirby.png",
+            "Kirby2.png",
+            "Kirby3.png",
+            "Kirby4.png",
+            "Kirby5.png"
+        ],
+        "bio": "Kirby-themed web game with interactive gameplay and sound effects.",
+        "link": "#"
+    },
+    {
+        "name": "Presidential Election",
+        "images": [
+            "Presidental.png",
+            "Presidental2.png",
+            "Presidental3.png",
+            "Presidental4.png",
+            "Presidental5.png",
+            "Presidental6.png"
+        ],
+        "bio": "Educational resource comparing presidential election data and historical information.",
+        "link": "#"
+    },
+    {
+        "name": "Famous Landmarks",
+        "images": [
+            "Famous.png",
+            "Famous2.png",
+            "Famous3.png",
+            "Famous4.png"
+        ],
+        "bio": "Gallery showcasing world-famous landmarks with photos, locations, and historical context.",
+        "link": "#"
+    },
+    {
+        "name": "Postcard Creator",
+        "images": [
+            "Postcard.png"
+        ],
+        "bio": "Tool to design and customize digital postcards with personal messages.",
+        "link": "#"
+    },
+    {
+        "name": "Random Name Generator",
+        "images": [
+            "Name.png",
+            "Name-Generated.png"
+        ],
+        "bio": "Generate random names with customizable options for different cultures and styles.",
+        "link": "#"
+    },
+    {
+        "name": "State Explorer",
+        "images": [
+            "State.png",
+            "State2.png"
+        ],
+        "bio": "Interactive map and information guide for all 50 US states and territories.",
+        "link": "#"
+    },
+    {
+        "name": "Story Generator",
+        "images": [
+            "Story.png",
+            "Story2.png",
+            "Story3.png",
+            "Story4.png",
+            "Story5.png",
+            "Story6.png",
+            "Story7.png",
+            "Story8.png"
+        ],
+        "bio": "Creative writing tool that generates story ideas and plot suggestions.",
+        "link": "#"
+    },
+    {
+        "name": "Meme Collection",
+        "images": [
+            "Meme.png",
+            "Meme2.png",
+            "Meme3.png"
+        ],
+        "bio": "Collection and sharing platform for popular internet memes and funny content.",
+        "link": "#"
+    }
+]

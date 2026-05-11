@@ -1,0 +1,88 @@
+[
+    {
+        "name": "Broadway Brew",
+        "images": [
+            "BroadwayBrew.png",
+            "BroadwayBrew2.png",
+            "BroadwayBrew3.png",
+            "BroadwayBrew4.png",
+            "BroadwayBrew5.png"
+        ],
+        "bio": "A vibrant coffeehouse website designed with Broadway flair. Features menu displays and interactive reservations.",
+        "link": "#"
+    },
+    {
+        "name": "MSKCC",
+        "images": [
+            "MSKCC.png",
+            "MSKCC2.png",
+            "MSKCC3.png"
+        ],
+        "bio": "Memorial Sloan Kettering Cancer Center website redesign with modern healthcare UI.",
+        "link": "#"
+    },
+    {
+        "name": "Music Exploration",
+        "images": [
+            "Music.png",
+            "Music2.png"
+        ],
+        "bio": "An interactive music discovery platform showcasing different genres and artists.",
+        "link": "#"
+    },
+    {
+        "name": "Paris Travel Guide",
+        "images": [
+            "Paris.png",
+            "Paris2.png",
+            "Paris3.png",
+            "Paris4.png",
+            "Paris5.png",
+            "Paris6.png",
+            "Paris7.png",
+            "Paris8.png"
+        ],
+        "bio": "A comprehensive travel guide to Paris featuring landmarks, restaurants, and attractions.",
+        "link": "#"
+    },
+    {
+        "name": "Planet Explorer",
+        "images": [
+            "Planet.png",
+            "Planet2.png",
+            "Planet3.png",
+            "Planet4.png"
+        ],
+        "bio": "Interactive solar system explorer with detailed information about each planet.",
+        "link": "#"
+    },
+    {
+        "name": "Pokémon Database",
+        "images": [
+            "Pokemon0.png",
+            "Pokemon1.png",
+            "Pokemon2.png",
+            "Pokemon3.png",
+            "Pokemon4.png",
+            "Pokemon5.png"
+        ],
+        "bio": "Comprehensive Pokémon reference guide with stats, abilities, and evolutions.",
+        "link": "#"
+    },
+    {
+        "name": "Farm Market",
+        "images": [
+            "MFarmMarket.png"
+        ],
+        "bio": "Local farm market website with product listings and farmer information.",
+        "link": "#"
+    },
+    {
+        "name": "Basic Website",
+        "images": [
+            "Basic.png"
+        ],
+        "bio": "Foundational web design project demonstrating HTML and CSS fundamentals.",
+        "link": "#"
+    }
+]
