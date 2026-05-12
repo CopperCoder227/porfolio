@@ -22,115 +22,8 @@
         body {
             font-family: 'SN Pro', sans-serif;
             overflow-x: hidden;
-        }
-
-        .parallax-container {
-            position: relative;
-            height: 100vh;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 50px;
-        }
-
-        .parallax-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            z-index: -1;
-            filter: brightness(0.7);
-        }
-
-        .parallax-title {
-            color: white;
-            font-size: 3rem;
-            font-weight: bold;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-            text-align: center;
-            z-index: 1;
-        }
-
-        .cards-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            padding: 50px 20px;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .card-bubble {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-        }
-
-        .card-bubble:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-        }
-
-        .card-image {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .card-content {
-            padding: 20px;
-        }
-
-        .card-title {
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #333;
-        }
-
-        .card-bio {
-            font-size: 0.95rem;
-            color: #666;
-            margin-bottom: 15px;
-            line-height: 1.5;
-        }
-
-        .card-link {
-            display: inline-block;
-            background: #007bff;
-            color: white;
-            padding: 8px 16px;
-            border-radius: 20px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: background 0.3s ease;
-        }
-
-        .card-link:hover {
-            background: #0056b3;
-            text-decoration: none;
-            color: white;
-        }
-
-        .web-section {
-            scroll-margin-top: 60px;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 40px;
-            color: #333;
+            background: #080918;
+            color: #fff;
         }
 
         nav.top-nav {
@@ -138,9 +31,9 @@
             top: 0;
             left: 0;
             right: 0;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.75);
             padding: 15px 30px;
-            z-index: 100;
+            z-index: 1000;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -155,20 +48,179 @@
             color: white;
             text-decoration: none;
             transition: color 0.3s ease;
+            font-weight: 700;
+            letter-spacing: 0.04em;
         }
 
         .top-nav-links a:hover {
-            color: #ffc107;
+            color: #64b5f6;
+        }
+
+        .parallax-container {
+            position: relative;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .video-bg,
+        .image-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .video-bg iframe,
+        .video-bg video,
+        .image-bg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-bg iframe,
+        .video-bg video {
+            pointer-events: none;
+        }
+
+        .hero-block,
+        .section-label {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            width: min(90%, 980px);
+            background: rgba(7, 15, 34, 0.7);
+            border: 2px solid rgba(255, 255, 255, 0.12);
+            border-radius: 32px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            box-shadow: 0 28px 60px rgba(0, 0, 0, 0.35);
+        }
+
+        .hero-block h1,
+        .section-label h1 {
+            font-size: clamp(2.4rem, 4vw, 4.2rem);
+            line-height: 1.02;
+            color: #f3f7ff;
+            margin: 0;
+        }
+
+        .section-label h1 {
+            margin: 0;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(240px, 1fr));
+            gap: 30px;
+            padding: 40px 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .card-bubble {
+            background: rgba(255, 255, 255, 0.96);
+            color: #111;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card-bubble:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 22px 50px rgba(0, 0, 0, 0.24);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-content {
+            padding: 22px;
+        }
+
+        .card-title {
+            font-size: 1.45rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            color: #0f172a;
+        }
+
+        .card-bio {
+            font-size: 0.98rem;
+            color: #444;
+            margin-bottom: 18px;
+            line-height: 1.6;
+        }
+
+        .card-link {
+            display: inline-block;
+            background: #0f62fe;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 700;
+            transition: background 0.3s ease;
+        }
+
+        .card-link:hover {
+            background: #054edb;
+        }
+
+        @keyframes floatUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        body * {
+            animation: floatUp 0.9s ease-out both;
+        }
+
+        .web-section {
+            scroll-margin-top: 80px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: clamp(2rem, 3vw, 3rem);
+            font-weight: 800;
+            margin-bottom: 30px;
+            color: #f8fbff;
+        }
+
+        .web-section-wrapper {
+            padding: 40px 0 60px;
+            background: linear-gradient(180deg, rgba(5, 15, 34, 0.95), rgba(7, 14, 30, 0.98));
         }
 
         .carousel-container {
             position: relative;
             width: 100%;
-            height: 300px;
-            background: #f0f0f0;
-            border-radius: 10px;
+            height: 280px;
+            background: #e6e9ef;
+            border-radius: 18px;
             overflow: hidden;
-            margin-bottom: 15px;
+            margin-bottom: 16px;
         }
 
         .carousel-slides {
@@ -187,7 +239,7 @@
 
         .carousel-nav {
             position: absolute;
-            bottom: 10px;
+            bottom: 12px;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
@@ -195,25 +247,56 @@
         }
 
         .carousel-dot {
-            width: 10px;
-            height: 10px;
+            width: 11px;
+            height: 11px;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.5);
+            background: rgba(255, 255, 255, 0.65);
             cursor: pointer;
-            transition: background 0.3s ease;
+            transition: all 0.25s ease;
+            border: 1px solid rgba(15, 23, 42, 0.18);
         }
 
         .carousel-dot.active {
-            background: white;
+            background: #0f62fe;
+            transform: scale(1.2);
         }
 
-        .web-section-wrapper {
-            padding: 40px 20px;
-            background: #f9f9f9;
+        @media (max-width: 1100px) {
+            .cards-container {
+                grid-template-columns: repeat(3, minmax(220px, 1fr));
+            }
         }
 
-        .web-section-wrapper:nth-child(even) {
-            background: white;
+        @media (max-width: 760px) {
+            .cards-container {
+                grid-template-columns: repeat(2, minmax(200px, 1fr));
+            }
+
+            .hero-block,
+            .section-label {
+                padding: 1.5rem 1.4rem;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .parallax-container {
+                min-height: 60vh;
+            }
+
+            .hero-block h1,
+            .section-label h1 {
+                font-size: 2.3rem;
+            }
+
+            .top-nav {
+                padding: 12px 18px;
+            }
+
+            .top-nav-links {
+                gap: 16px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
         }
     </style>
 </head>
@@ -222,52 +305,81 @@
     <nav class="top-nav">
         <div class="top-nav-links">
             <a href="index.html">Home</a>
-            <a href="#web1">Web 1</a>
-            <a href="#web2">Web 2</a>
-            <a href="#web3">Web 3</a>
+            <a href="#web1">Sophmore</a>
+            <a href="#web2">Junior</a>
+            <a href="#web3">Senior</a>
         </div>
     </nav>
 
     <div style="margin-top: 60px;"></div>
 
-    <!-- Web 1 Section -->
-    <div class="parallax-container">
-        <div class="parallax-bg" style="background-image: url('imgs/Web1/Broadway Brew.png');"></div>
-        <h1 class="parallax-title">Web Design 1</h1>
-    </div>
+    <!-- Home Section -->
+    <section class="parallax-container">
+        <div class="video-bg">
+            <iframe
+                src="https://www.youtube.com/embed/gHy5o3GjDow?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&loop=1&playlist=gHy5o3GjDow&modestbranding=1&enablejsapi=1"
+                title="Galaxy backdrop video" frameborder="0"
+                allow="autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="hero-block">
+            <h1>Cooper Steiner<br>Coding through the years!</h1>
+        </div>
+    </section>
 
-    <div class="web-section-wrapper">
+    <!-- Sophmore Section -->
+    <section class="parallax-container">
+        <div class="video-bg">
+            <iframe
+                src="https://www.youtube.com/embed/gHy5o3GjDow?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&loop=1&playlist=gHy5o3GjDow&modestbranding=1&enablejsapi=1"
+                title="Galaxy backdrop video" frameborder="0"
+                allow="autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="section-label">
+            <h1>Sophmore</h1>
+        </div>
+    </section>
+
+    <section class="web-section-wrapper">
         <div class="web-section" id="web1">
-            <h2 class="section-title">Web 1 Projects</h2>
+            <h2 class="section-title">Sophmore Projects</h2>
             <div class="cards-container" id="web1-cards"></div>
         </div>
-    </div>
+    </section>
 
-    <!-- Web 2 Section -->
-    <div class="parallax-container">
-        <div class="parallax-bg" style="background-image: url('imgs/Web2/RPS.png');"></div>
-        <h1 class="parallax-title">Web Design 2</h1>
-    </div>
+    <!-- Junior Section -->
+    <section class="parallax-container">
+        <div class="video-bg">
+            <video autoplay muted loop playsinline
+                src="videos/700_F_641376619_yEqOvvxQ428FkaBHeU4fzsDIVKnm4YXV_ST.mp4"></video>
+        </div>
+        <div class="section-label">
+            <h1>Junior</h1>
+        </div>
+    </section>
 
-    <div class="web-section-wrapper">
+    <section class="web-section-wrapper">
         <div class="web-section" id="web2">
-            <h2 class="section-title">Web 2 Projects</h2>
+            <h2 class="section-title">Junior Projects</h2>
             <div class="cards-container" id="web2-cards"></div>
         </div>
-    </div>
+    </section>
 
-    <!-- Web 3 Section -->
-    <div class="parallax-container">
-        <div class="parallax-bg" style="background-image: url('imgs/Web3/SweetsBySammy.png');"></div>
-        <h1 class="parallax-title">Web Design 3</h1>
-    </div>
+    <!-- Senior Section -->
+    <section class="parallax-container">
+        <div class="video-bg">
+            <video autoplay muted loop playsinline src="videos/11584395-uhd_3840_2160_60fps.mp4"></video>
+        </div>
+        <div class="section-label">
+            <h1>Senior</h1>
+        </div>
+    </section>
 
-    <div class="web-section-wrapper">
+    <section class="web-section-wrapper">
         <div class="web-section" id="web3">
-            <h2 class="section-title">Web 3 Projects</h2>
+            <h2 class="section-title">Senior Projects</h2>
             <div class="cards-container" id="web3-cards"></div>
         </div>
-    </div>
+    </section>
 
     <footer class="container mt-5 mb-5 text-center">
         <p>&copy; 2026 Cooper Steiner Portfolio</p>
@@ -296,7 +408,7 @@
             card.className = 'card-bubble';
 
             const imagesHTML = project.images.length > 1
-                ? createCarousel(project.images)
+                ? createCarousel(project.images, webNumber)
                 : `<img src="imgs/Web${webNumber}/${project.images[0]}" alt="${project.name}" class="card-image">`;
 
             card.innerHTML = `
@@ -311,11 +423,11 @@
             return card;
         }
 
-        function createCarousel(images) {
+        function createCarousel(images, webNumber) {
             const carouselHTML = `
         <div class="carousel-container">
           <div class="carousel-slides" data-carousel>
-            ${images.map(img => `<img src="imgs/Web${event.target.dataset.web}/${img}" class="carousel-slide" alt="Project image">`).join('')}
+            ${images.map(img => `<img src="imgs/Web${webNumber}/${img}" class="carousel-slide" alt="Project image">`).join('')}
           </div>
           <div class="carousel-nav" data-nav>
             ${images.map((_, i) => `<div class="carousel-dot ${i === 0 ? 'active' : ''}" data-slide="${i}"></div>`).join('')}
