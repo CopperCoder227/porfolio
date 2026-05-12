@@ -193,7 +193,7 @@
         }
 
         body * {
-            animation: floatUp 0.9s ease-out both;
+            animation: floatUp 0.28s ease-out both;
         }
 
         .web-section {
@@ -304,10 +304,23 @@
 <body>
     <nav class="top-nav">
         <div class="top-nav-links">
-            <a href="index.html">Home</a>
-            <a href="#web1">Sophmore</a>
-            <a href="#web2">Junior</a>
-            <a href="#web3">Senior</a>
+            <a href="index.html#home">Home</a>
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle" onclick="event.preventDefault();">About</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="index.html#about">Me</a>
+                    <a class="dropdown-item" href="index.html#future">Future</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="websites.html" class="dropdown-toggle">Websites</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#web1">Soph</a>
+                    <a class="dropdown-item" href="#web2">Jr</a>
+                    <a class="dropdown-item" href="#web3">Sr</a>
+                    <a class="dropdown-item disabled" href="#" onclick="event.preventDefault();">Favos</a>
+                </div>
+            </div>
         </div>
     </nav>
 
